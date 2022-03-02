@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html lang="hu">
+        <head>
+
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link rel="stylesheet" style="text/css" href="reg.css">
+            
+            <title>Regisztráció</title>
+        </head>
+        <body>
+            <h1>
+                Regisztráció
+            </h1>
+            <fieldset>
+                <input type="email" placeholder="E-mail cím" required>
+                <br>
+                <br>
+                <input type="password" placeholder="Jelszó" id="password1" required>
+                <br>
+                <br>
+                <input type="password" placeholder="Jelszó ismérlése" id="password2" required>
+                <br>
+                <br>
+                <button onclick="reg(password1.value, password2.value)">
+                    Regisztráció
+                </button>
+            </fieldset>
+            <script>
+                reg(password1, password2)
+                {
+                    if(password1 == password2)
+                    {
+                        localStorage.setItem(password1.value, password2.value)
+                    }
+                }
+            </script>
+        </body>
+    </html>

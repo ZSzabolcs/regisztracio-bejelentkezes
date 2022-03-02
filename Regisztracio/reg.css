@@ -1,0 +1,30 @@
+body
+{
+    background-color: gray;
+}
+
+h1
+{
+    text-align: center;
+}
+
+input
+{
+    width: 490px;
+    height: 30px;
+}
+
+button
+{
+    width: 120px;
+    height: 30px;
+}
+
+fieldset
+{
+    background-color: lightgrey;
+    width: 500px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="hu">
+        <head>
+
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+            <link rel="stylesheet" style="text/css" href="Bej.css">
+
+            <title>Bejelentkezés</title>
+        </head>
+        <body>
+            <div>
+                <h1>
+                    Bejelentkezés
+                </h1>
+                <br>
+                <br>
+                <fieldset style= "width: 0%;">
+                    <legend>
+                        Bejelentkezés
+                    </legend>
+                    <input type="text" placeholder="Felhasználónév" id="user" required>
+                    <br>
+                    <br>
+                    <input type="password" placeholder="Jelszó" id="pass" required>
+                    <br>
+                    <br>
+                    <button onclick="belep(user.value, pass.value)" > OK </button>
+                </fieldset>
+                <button onclick="document.body.style.backgroundColor = 'green'">
+                    Háttér: zöld
+                </button>
+                <button onclick="document.body.style.backgroundColor = 'lightgreen'">
+                    Háttér: világoszöld
+                </button>
+                <p id="fel"></p>
+                <p id="jel"></p>
+            </div>
+            <script>
+                function belep(username, password)
+                {
+                    document.getElementById("fel").innerHTML = username
+                    document.getElementById("jel").innerHTML = password
+                    if(username == "Szabolcs")
+                    {
+                        if(password == "123")
+                        {
+                            alert("Jep. :)")
+                        }
+                    }
+                    if(username != "Szabolcs")
+                    {
+                            alert("Nop. :(")
+                    }
+                    if(password != "123")
+                    {
+                            alert("Nop. :(")
+                    }
+                }
+            </script>
+        </body>
+    </html>
