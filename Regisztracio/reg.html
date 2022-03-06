@@ -15,7 +15,7 @@
                 Regisztráció
             </h1>
             <fieldset>
-                <input type="email" placeholder="E-mail cím" required>
+                <input type="email" placeholder="E-mail cím"  id="email" required>
                 <br>
                 <br>
                 <input type="password" placeholder="Jelszó" id="password1" required>
@@ -24,17 +24,20 @@
                 <input type="password" placeholder="Jelszó ismérlése" id="password2" required>
                 <br>
                 <br>
-                <button onclick="reg(password1.value, password2.value)">
+                <button onclick="reg(email.value, password1.value, password2.value)">
                     Regisztráció
                 </button>
             </fieldset>
             <script>
-                function reg(password1, password2)
+                function reg(email, password1, password2)
                 {
-                    if(password1 == password2)
-                    {
-                        localStorage.setItem(password1.value, password2.value)
-                    }
+                   if(email != " ")
+                   {
+                        if(password1 == password2)
+                        {
+                            localStorage.setItem(password1.value, password2.value)
+                        }
+                   }
                 }
             </script>
         </body>
